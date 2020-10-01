@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  h1 #{author.name}
+  p #{author.lifespan_formatted[0]} - #{author.lifespan_formatted[1]}
+
+  div.detail-list
+
+    h2 Books
+
+    dl
+      each book in author_books
+        dt
+          a(href=book.url) #{book.title}
+        dd #{book.summary}
+
+      else
+        p This author has no books.
+
+  hr
+  p
+    a(href=author.url+'/delete') Delete author
+  p
+    a(href=author.url+'/update') Update author

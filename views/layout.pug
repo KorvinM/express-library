@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css', integrity='sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=', crossorigin='anonymous')
+    link(rel='stylesheet', href='//brick.freetls.fastly.net/Lato:400,700,400i,700i/EB+Garamond:400')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='grid-container fluid')
+      div(class='main grid-x grid-margin-x')
+        nav(class='cell medium-3')
+          block sidebar
+            ul(class='menu horizontal medium-vertical')
+              li
+                a(href='/catalog') Home
+              li
+                a(href='/catalog/books') All books
+              li
+                a(href='/catalog/authors') All authors
+              li
+                a(href='/catalog/genres') All genres
+              li
+                a(href='/catalog/bookinstances') All copies
+              li
+                hr
+              li
+                a(href='/catalog/author/create') Create new author
+              li
+                a(href='/catalog/genre/create') Create new genre
+              li
+                a(href='/catalog/book/create') Create new book
+              li
+                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+
+        div(class='cell medium-9 content')
+          block content
+
+    footer
+      ul.menu.simple.expanded
+        li A project by
+            a(href='https://media.korvin.org')  Korvin M Media
+        li
+          a(href='https://github.com') Source
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>

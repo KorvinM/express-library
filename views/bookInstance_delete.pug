@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}: #{book_title}
+  p= bookInstance.id
+  
+    div(style='margin-left:20px;margin-top:20px')
+
+      p Do you really want to delete this copy?
+    
+      form(method='POST' action='')
+        div.form-group
+          input#bookInstanceid.form-control(type='hidden',name='bookInstanceid', required='true', value=bookInstance._id )
+
+        button.button.hollow(type='submit') Delete
+

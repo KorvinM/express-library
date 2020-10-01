@@ -1,0 +1,75 @@
+body {
+  font: 16px "Lato", Helvetica, Arial, sans-serif;
+  background: #040400;
+}
+
+h1, h2, h3, h4{
+  font-family: "EB Garamond", serif; line-height: 1;
+}
+h1{text-transform: uppercase;}
+a {
+  color: #574a08;
+  padding: 0.4em 0.24em 0 0;
+}
+.button.hollow{
+  color: #574a08;
+  font-weight: 700;
+  border-color: #574a08;
+  border-radius: 6px 4px;
+}
+
+.main{
+  padding: 1.62em 2em;
+  background: #fff6ee;
+  border: inset 1em #040400;
+  margin-bottom: 6vh;
+  box-shadow: 0em 1em 16em 1em #10203f;
+}
+
+.main a{
+  background: #FFFEFB;
+}
+
+.content{
+  line-height: 1.4
+}
+
+nav {
+  background: #FFFEFB;
+}
+ul{list-style: none}
+dd{
+  margin-bottom: 1em;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  height: 6vh;
+  width: 100vw;
+  padding: 0.62em 0 0 1em;
+  color: #040400;
+  background: #eee;
+}
+
+footer .menu a{
+  display: inline;
+}
+
+footer .menu li{
+}
+
+.copy{
+  max-width: 38em;
+}
+
+.errors{
+  color: #602343;
+  font-weight: 700;
+  font-style:italic;
+  font-size: 1.1em;
+}
+
+.detail-list{
+  margin: 1.4em 0 0 1.4em;
+}

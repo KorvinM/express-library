@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p.lead A basic webapp based on the 
+    a(href='https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website') MDN's  #[strong] Express Tutorial: The Local Library website
+
+  h2 Records
+
+  if error
+    p Error getting records
+  else
+    ul
+      li #[strong Books ] !{data.book_count}
+      li #[strong Copies ] !{data.book_instance_count}
+      li #[strong Available copies] !{data.book_instance_available_count}
+      li #[strong Authors] !{data.author_count}
+      li #[strong Genres] !{data.genre_count}

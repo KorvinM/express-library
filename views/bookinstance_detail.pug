@@ -1,0 +1,29 @@
+extends layout
+block content
+
+  h1 Copy of:
+    br
+    em #{bookinstance.book.title}
+  div.card.copy
+    div.card-divider
+      p.lead ID: #{bookinstance._id}
+    div.card-section
+      p #[strong Title: ]
+        a(href=bookinstance.book.url) #{bookinstance.book.title}
+      p #[strong Imprint:] #{bookinstance.imprint}
+
+      p #[strong Status: ]
+        if bookinstance.status=='Available'
+          span.label.success #{bookinstance.status}
+        else if bookinstance.status=='Maintenance'
+          span.label.alert #{bookinstance.status}
+        else
+          span.label.warning #{bookinstance.status}
+
+      if bookinstance.status!='Available'
+        p #[strong Due back: ] #{bookinstance.due_back_formatted}
+  hr
+  p
+    a(href=bookinstance.url+'/delete') Delete copy
+  p
+    a(href=bookinstance.url+'/update') Update copy
