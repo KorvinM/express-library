@@ -1,5 +1,7 @@
 /* Local Library */
-var config = require('./config.js');
+if (process.env.NODE_ENV===development){
+  var config = require('./config.js');
+}
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -17,12 +19,12 @@ app.use(helmet());
 //set up mongoose db connection
 var mongoose = require('mongoose');
 // use the OS set env mongo uri, if set, or the dev url set in config.js
-var mongoDB = process.env.MONGODB_URI||config.dev_db_uri; 
+var mongoDB = process.env.MONGODB_URI||config.dev_db_uri;
 mongoose.connect(mongoDB, {
   useNewUrlParser: true,
   useUnifiedTopology: true});
 var db = mongoose.connection;
-//binds to the error event (so that errors will be printed to the console). 
+//binds to the error event (so that errors will be printed to the console).
 db.on('error', console.error.bind(
   console, 'MongoDB connection error:'));
 
