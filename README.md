@@ -10,19 +10,19 @@ Based on the Mozilla Development Network's [Express Tutorial: The Local Library 
 * Create a development database at Mongodb.com, and add the uri for the database to config.js where indicated
 * Ensure your node environment variable is set to 'development':
 
-__Windows:__
-`SET NODE_ENV=development`
-or
-`set NODE_ENV=development`
+  __Windows:__
+  `SET NODE_ENV=development`
+  or
+  `set NODE_ENV=development`
 
-__OS X / Linux:__
-`export NODE_ENV=development`
+  __OS X / Linux:__
+  `export NODE_ENV=development`
 
-__Windows CMD__:
-`set NODE_ENV=production`
+  __Windows CMD__:
+  `set NODE_ENV=development`
 
-__Windows PowerShell:__
-`$env:NODE_ENV="production"`
+  __Windows PowerShell:__
+  `$env:NODE_ENV="development"`
 
 * To start, run `npm run serverstart`.
 
