@@ -23,6 +23,7 @@ Based on the Mozilla Development Network's [Express Tutorial: The Local Library 
 
   __Windows PowerShell:__
   `$env:NODE_ENV="development"`
-
+  
+  (The commands shown above are from [this comment](https://davidwalsh.name/node-environment-variables#comment-510249))
 * To start, run `npm run serverstart`.
 
