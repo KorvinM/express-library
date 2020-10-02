@@ -9,24 +9,19 @@ Based on the Mozilla Development Network's [Express Tutorial: The Local Library 
 * Rename sample-config.js to config.js
 * Create a development database at Mongodb.com, and add the uri for the database to config.js where indicated
 * Ensure your node environment variable is set to 'development':
-### Windows:
 
+__Windows:__
 `SET NODE_ENV=development`
 or
 `set NODE_ENV=development`
 
-
-### OS X / Linux:
-
+__OS X / Linux:__
 `export NODE_ENV=development`
 
-
-
-### Windows CMD
+__Windows CMD__:
 `set NODE_ENV=production`
 
-
-### Windows PowerShell:
+__Windows PowerShell:__
 `$env:NODE_ENV="production"`
 
 * To start, run `npm run serverstart`.
