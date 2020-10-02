@@ -27,3 +27,9 @@ Based on the Mozilla Development Network's [Express Tutorial: The Local Library 
   (The commands shown above are from [this comment](https://davidwalsh.name/node-environment-variables#comment-510249))
 * To start, run `npm run serverstart`.
 
+## TODO
+* Implement auth
+* Implement more control over production and dev modes
+* moment.js is now considered deprecated. Replace with alternative
+* improve styling
+* make app generally more user-friendly and efficient: 'more robust' as the original tutorial puts it
