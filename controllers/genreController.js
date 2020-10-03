@@ -159,10 +159,10 @@ exports.genre_delete_post = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         // Success
-        // whether the Genre has books or not, delete object and redirect to the genre list.
+        // whether the Genre has Books or not, delete object
         Genre.findByIdAndRemove(req.body.genreid, function deleteGenre(err) {
             if (err) { return next(err); }
-            // Success - go to author list
+            // Success - redirect to genre list
             res.redirect('/catalog/genres')
         })
 
