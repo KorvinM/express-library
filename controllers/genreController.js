@@ -159,19 +159,13 @@ exports.genre_delete_post = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         // Success
-        if (results.genre_books.length > 0) {
-            // Genre has books. Render in same way as for GET route.
-            res.render('genre_delete', { title: 'Delete Genre', genre: results.genre, genre_books: results.genre_books } );
-            return;
-        }
-        else {
-            // Genre has no books. Delete object and redirect to the list of authors.
-            Genre.findByIdAndRemove(req.body.genreid, function deleteGenre(err) {
-                if (err) { return next(err); }
-                // Success - go to author list
-                res.redirect('/catalog/genres')
-            })
-        }
+        // whether the Genre has books or notelete object and redirect to the list of authors.
+        Genre.findByIdAndRemove(req.body.genreid, function deleteGenre(err) {
+            if (err) { return next(err); }
+            // Success - go to author list
+            res.redirect('/catalog/genres')
+        })
+        
     });
 };
 
