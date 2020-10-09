@@ -45,7 +45,7 @@ dd{
 footer{
   position: fixed;
   bottom: 0;
-  height: 13vh;
+  height: auto;
   width: 100vw;
   padding: 0.62em 0 0 1em;
   color: #040400;
