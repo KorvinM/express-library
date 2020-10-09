@@ -7,17 +7,19 @@ html(lang='en')
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css', integrity='sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=', crossorigin='anonymous')
     link(rel='stylesheet', href='//brick.freetls.fastly.net/Lato:400,700,400i,700i/EB+Garamond:400')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+  body(class= (body_class))
     div(class='grid-container fluid')
       div(class='main grid-x grid-margin-x')
-        nav(class='cell medium-3')
+        <nav class='cell medium-3 off-canvas position-bottom in-canvas-for-medium' id='main-navigation' data-options='inCanvasFor:medium;' data-off-canvas data-transition='detached'>
           block sidebar
-            ul(class='menu horizontal medium-vertical')
+            ul.menu.horizontal.medium-vertical
               li
                 a(href='/catalog') Home
               li
                 a(href='/catalog/books') All books
-              li
+              lidata-transition:detached
                 a(href='/catalog/authors') All authors
               li
                 a(href='/catalog/genres') All genres
@@ -33,14 +35,17 @@ html(lang='en')
                 a(href='/catalog/book/create') Create new book
               li
                 a(href='/catalog/bookinstance/create') Create new book instance (copy)
-
-        div(class='cell medium-9 content')
+        </nav>
+        div(class='cell medium-5 large-8 content off-canvas-content callout' data-off-canvas-content)
           block content
 
     footer
       ul.menu.simple.expanded
-        li A project by
+        li Express-Library: a project by
             a(href='https://media.korvin.org')  Korvin M Media
         li
           a(href='https://github.com/KorvinM/express-library') Source
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+        li
+          button.button.hollow.hide-for-medium(type='button' data-toggle='main-navigation') Menu
+
+    <script src="/javascripts/main.js"></script>

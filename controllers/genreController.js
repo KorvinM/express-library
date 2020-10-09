@@ -19,7 +19,8 @@ exports.genre_list = function(req, res, next) {
       //successful, so render
       res.render('genre_list',{
         title: 'Genres',
-        genre_list: list_genres})
+        genre_list: list_genres,
+        body_class:'genre_list' })
     });
 };
 

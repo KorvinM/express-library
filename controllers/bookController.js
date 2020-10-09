@@ -68,7 +68,8 @@ exports.book_list = function(req, res, next) {
       //Successful, so render
       res.render('book_list',{
         title: 'Books',
-        book_list: list_books });
+        book_list: list_books,
+        body_class: 'books' });
     });
 };
 
@@ -105,7 +106,8 @@ exports.book_detail = function(req, res, next) {
     res.render('book_detail',{
       title: results.book.title,
       book: results.book,
-      book_instances: results.book_instance });
+      book_instances: results.book_instance,
+      body_class: 'book' });
   });
 };
 

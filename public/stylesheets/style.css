@@ -19,10 +19,10 @@ a {
 }
 
 .main{
-  padding: 1.62em 2em;
+  padding: 1em 0;
   background: #fff6ee;
   border: inset 1em #040400;
-  margin-bottom: 6vh;
+  margin-bottom: 13vh;
   box-shadow: 0em 1em 16em 1em #10203f;
 }
 
@@ -45,7 +45,7 @@ dd{
 footer{
   position: fixed;
   bottom: 0;
-  height: 6vh;
+  height: 13vh;
   width: 100vw;
   padding: 0.62em 0 0 1em;
   color: #040400;
@@ -71,5 +71,29 @@ footer .menu li{
 }
 
 .detail-list{
-  margin: 1.4em 0 1em 1.4em;
+  margin: 1.4em 0 1em 0.24em;
 }
+
+/* Foundation media queries */
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .main{margin-bottom: 7vh}
+  footer{height: 7vh}
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .main{
+    padding: 1.62em 2em;
+  }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

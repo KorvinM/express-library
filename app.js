@@ -15,7 +15,11 @@ var compression = require('compression');
 var helmet = require('helmet');
 var app = express();
 
-app.use(helmet());
+app.use(helmet.contentSecurityPolicy({
+  directives:{
+    defaultSrc: ["'self'", "cdn.jsdelivr.net", "code.jquery.com","brick.freetls.fastly.net"],
+  }
+}));
 //set up mongoose db connection
 var mongoose = require('mongoose');
 // use the OS set env mongo uri, if set, or the dev url set in config.js
