@@ -12,7 +12,7 @@ html(lang='en')
   body(class= (body_class))
     div(class='grid-container fluid')
       div(class='main grid-x grid-margin-x')
-        <nav class='cell medium-3 off-canvas position-bottom in-canvas-for-medium' id='main-navigation' data-options='inCanvasFor:medium;' data-off-canvas data-transition='detached'>
+        <nav class='cell medium-2 off-canvas position-bottom in-canvas-for-medium' id='main-navigation' data-options='inCanvasFor:medium;' data-off-canvas data-transition='detached'>
           block sidebar
             ul.menu.horizontal.medium-vertical
               li
@@ -34,9 +34,9 @@ html(lang='en')
               li
                 a(href='/catalog/book/create') Create new book
               li
-                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+                a(href='/catalog/bookinstance/create') Create new copy
         </nav>
-        div(class='cell medium-5 large-8 content off-canvas-content callout' data-off-canvas-content)
+        div(class='cell medium-6 large-8 content off-canvas-content callout' data-off-canvas-content)
           block content
 
     footer
