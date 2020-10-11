@@ -19,6 +19,14 @@ a {
 }
 .label.success{
   background: #50892f;
+  color:#fefefe;
+}
+.label.alert{
+  background: #743717
+}
+
+.label.warning{
+  background: #9c7336;
 }
 .main{
   padding: 1em 0;
