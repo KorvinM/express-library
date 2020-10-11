@@ -22,7 +22,8 @@ a {
   color:#fefefe;
 }
 .label.alert{
-  background: #743717
+  background: #743717;
+  color:#fefefe;
 }
 
 .label.warning{
