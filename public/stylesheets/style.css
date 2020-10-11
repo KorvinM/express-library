@@ -17,7 +17,9 @@ a {
   border-color: #574a08;
   border-radius: 6px 4px;
 }
-
+.label.success{
+  background: #50892f;
+}
 .main{
   padding: 1em 0;
   background: #fff6ee;
