@@ -1,6 +1,6 @@
 body {
   font: 16px "Lato", Helvetica, Arial, sans-serif;
-  background: #040400;
+  background: #00060c;
 }
 
 h1, h2, h3, h4{
@@ -8,11 +8,11 @@ h1, h2, h3, h4{
 }
 h1{text-transform: uppercase;}
 a {
-  color: #574a08;
+  color: #4e1d04;
   padding: 0.4em 0.24em 0 0;
 }
 .button.hollow{
-  color: #574a08;
+  color: #4e1d04;
   font-weight: 700;
   border-color: #574a08;
   border-radius: 6px 4px;
@@ -21,7 +21,7 @@ a {
 .main{
   padding: 1em 0;
   background: #fff6ee;
-  border: inset 1em #040400;
+  border: inset 0.8em #130600;
   margin-bottom: 13vh;
   box-shadow: 0em 1em 16em 1em #10203f;
 }
