@@ -55,7 +55,7 @@ async.parallel({
         }
         // Successful, so render.
         res.render('author_detail', {
-          title: 'Author Detail',
+          title: 'Author : '+results.author.first_name+' '+results.author.family_name,
           author: results.author,
           author_books: results.authors_books } );
     });

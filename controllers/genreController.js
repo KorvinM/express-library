@@ -56,7 +56,7 @@ exports.genre_detail = function(req, res, next) {
     }
     // Successful, so render
     res.render('genre_detail', {
-      title: 'Genre Detail',
+      title: 'Genre : '+results.genre.name,
       genre: results.genre,
       genre_books: results.genre_books
     } );
